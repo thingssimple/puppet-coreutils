@@ -6,12 +6,12 @@ class coreutils::gnubin {
   }
 
   file_line { "Add gnubin to all environment paths":
-    path => "${home}/.zshrc",
+    path => "${home}/.env",
     line => 'PATH="/opt/boxen/homebrew/opt/coreutils/libexec/gnubin:$PATH"'
   }
 
   file_line { "Add gnubin to all environment man paths":
-    path => "${home}/.zshrc",
+    path => "${home}/.env",
     line => 'MANPATH="/opt/boxen/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"'
   }
 }
